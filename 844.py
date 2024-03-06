@@ -10,8 +10,9 @@ class Solution(object):
     def getActualStr(self, txt):
         arr = []
         for i in range(len(txt)):
-            if txt[i] == '#' and i != 0:
-                arr = arr[:-1]
+            if txt[i] == '#':
+                if i != 0:
+                    arr = arr[:-1]
             else:
                 arr.append(txt[i])
         return ' '.join(arr)
